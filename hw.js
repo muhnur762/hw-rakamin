@@ -3,17 +3,13 @@ let ganjil = [];
 let genap = [];
 
 // Buat Array dengan jumlah index 100 
-const angka = [
-    13, 40, 16, 33, 27, 49, 25, 24, 39,  4, 34, 37,
-    13, 45,  3, 17,  7, 24,  7, 50, 20, 21, 43,  7,
-    25, 48,  4, 42, 20, 37, 19, 23, 49, 36, 48, 23,
-    15, 28, 48, 33, 37, 42, 25, 10,  5, 35, 41, 42,
-    27, 34, 23,  8, 16, 24, 35, 45, 28, 10, 17, 42,
-    10, 14,  2, 30,  8, 24, 28, 29,  1, 18, 39, 39,
-    14,  6, 46, 13,  5, 17, 13, 43,  5, 17, 19,  1,
-     3,  6, 43, 16, 42,  1, 19, 30,  5, 15, 41, 16,
-     8, 32,  6, 26
-    ];
+const angka = [];
+for (let i = 0; i < 100; i++) {
+    let randomNumber = Math.floor(Math.random() * 50) + 1;
+    angka.push(randomNumber);
+  }
+console.log(angka);
+  
 
 // pecah menjadi 2 array bedasarkan index ganjil dan genap 
 function ganjilGenap (dataAngka){
@@ -88,11 +84,11 @@ function rataRata (data){
 // membuat function perbandingan nilai
 function banding (sub, ganjil, genap){
 if (ganjil > genap){
-        console.log(sub + " Lebih Besar Array Ganjil");
+        console.log(sub, " Lebih Besar Array Ganjil");
     }else if (ganjil < genap){
-        console.log(sub + " Lebih besar Array Genap");
+        console.log(sub, " Lebih besar Array Genap");
     }else{
-        console.log(sub + " Memiliki Nilai Yang Sama Antara Array Ganjil dan Genap");
+        console.log(sub, " Memiliki Nilai Yang Sama Antara Array Ganjil dan Genap");
     }
 }
 // implementasi 
@@ -100,29 +96,29 @@ ganjilGenap(angka);
 
 let minganjil = min(ganjil);
 let mingenap = min(genap);
-console.log("MIN array index ganjil = " +minganjil);
-console.log("MIN array index genap = " +mingenap);
-banding("MIN",minganjil,mingenap);
+console.log("MIN array index ganjil = " ,minganjil);
+console.log("MIN array index genap = " ,mingenap);
+banding("MIN",minganjil,mingenap, '\n');
 
 let maxganjil = max(ganjil);
 let maxgenap = max(genap);
-console.log("MAX array index ganjil = "+maxganjil);
-console.log("MAX array index genap = "+maxgenap);
-banding("MAX",maxganjil,maxgenap);
+console.log("MAX array index ganjil = ",maxganjil);
+console.log("MAX array index genap = ",maxgenap);
+banding("MAX",maxganjil,maxgenap, '\n');
 
 
 let totalganjil = total(ganjil);
 let totalgenap = total(genap);
-console.log("Total array index ganjil = "+totalganjil);
-console.log("Total array index genap = "+totalgenap);
-banding("Total",totalganjil,totalgenap);
+console.log("Total array index ganjil = ",totalganjil);
+console.log("Total array index genap = ",totalgenap);
+banding("Total",totalganjil,totalgenap, '\n');
 
 
 let rataganjil = rataRata(ganjil);
 let ratagenap = rataRata(genap);
-console.log("Rata - Rata array index ganjil = "+rataganjil);
-console.log("Rata - Rata array index genap = "+ratagenap);
-banding("Rata - Rata",rataganjil,ratagenap);
+console.log("Rata - Rata array index ganjil = ",rataganjil);
+console.log("Rata - Rata array index genap = ",ratagenap);
+banding("Rata - Rata",rataganjil,ratagenap, '\n');
 
 
 

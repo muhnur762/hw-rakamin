@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework 5 Rakamin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+    </style>
+   
+  </head>
+  <body>
+  <!-- navbar -->
+  <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 150" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,45L26.7,57.5C53.3,70,107,95,160,95C213.3,95,267,70,320,70C373.3,70,427,95,480,97.5C533.3,100,587,80,640,72.5C693.3,65,747,70,800,82.5C853.3,95,907,115,960,105C1013.3,95,1067,55,1120,42.5C1173.3,30,1227,45,1280,47.5C1333.3,50,1387,40,1440,32.5C1493.3,25,1547,20,1600,25C1653.3,30,1707,45,1760,57.5C1813.3,70,1867,80,1920,70C1973.3,60,2027,30,2080,27.5C2133.3,25,2187,50,2240,57.5C2293.3,65,2347,55,2400,45C2453.3,35,2507,25,2560,22.5C2613.3,20,2667,25,2720,40C2773.3,55,2827,80,2880,97.5C2933.3,115,2987,125,3040,117.5C3093.3,110,3147,85,3200,62.5C3253.3,40,3307,20,3360,10C3413.3,0,3467,0,3520,15C3573.3,30,3627,60,3680,80C3733.3,100,3787,110,3813,115L3840,120L3840,150L3813.3,150C3786.7,150,3733,150,3680,150C3626.7,150,3573,150,3520,150C3466.7,150,3413,150,3360,150C3306.7,150,3253,150,3200,150C3146.7,150,3093,150,3040,150C2986.7,150,2933,150,2880,150C2826.7,150,2773,150,2720,150C2666.7,150,2613,150,2560,150C2506.7,150,2453,150,2400,150C2346.7,150,2293,150,2240,150C2186.7,150,2133,150,2080,150C2026.7,150,1973,150,1920,150C1866.7,150,1813,150,1760,150C1706.7,150,1653,150,1600,150C1546.7,150,1493,150,1440,150C1386.7,150,1333,150,1280,150C1226.7,150,1173,150,1120,150C1066.7,150,1013,150,960,150C906.7,150,853,150,800,150C746.7,150,693,150,640,150C586.7,150,533,150,480,150C426.7,150,373,150,320,150C266.7,150,213,150,160,150C106.7,150,53,150,27,150L0,150Z"></path></svg>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Homework 5</a>
+    </div>
+  </nav> -->
+  <!-- end navbar -->
+<div class="text-center mt-4">
+  <button class="btn btn-warning" onclick="pidahkeform()" id="form">Form</button>
+  <button class="btn btn-warning" onclick="pindahketabel()" id="tabel">Tabel</button>
+</div>
+  <!-- form -->
+ <section class="p-5" id="tabForm">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <div class="card shadow ">
+        <h5 class="card-header">Form</h5>
+        <div class="card-body">
+
+          <div class="alert alert-success d-none" role="alert" id="alert">
+            Data Berhasil Disimpan!
+          </div>
+
+          <form action="">
+          <div class="mb-3 row">
+            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="nama" required minlength="10">
+    
+              <div id="validationServer05Feedback" class="invalid-feedback">
+                panjang Minimal 10!
+              </div>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="umur" required min="25">
+    
+              <div id="validationServer05Feedback" class="invalid-feedback">
+                Umur Minimal 25 tahun!
+              </div>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="sangu" class="col-sm-2 col-form-label">Uang Saku</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="sangu" required min="100000" max="1000000">
+    
+              <div id="validationServer05Feedback" class="invalid-feedback">
+                Uang Sangu minimal 100 ribu dan maksimal 1 juta!
+              </div>
+            </div>
+        </div>
+        <div class=" text-end">
+          <!-- <input type="submit" class="btn btn-warning" value="Simpan" > -->
+          <button class="btn btn-warning" onclick="kirim()">Simpan</button>
+        </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </section>
+  <!-- end form -->
+
+  <!-- table -->
+ <section class="p-5 d-none" id="tabTabel">
+  <div class="card shadow">
+    <h5 class="card-header">Tabel Data</h5>
+    <div class="card-body">
+      <table class="table" id="tabelData">
+        <thead>
+          <tr class="table-warning">
+            <th>No</th>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Uang Sangu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-warning">
+            <th colspan="2">Rata Rata</th>
+            <th id="rataUmur">0</th>
+            <th id="rataSangu">0</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </section>
+ <!-- my js -->
+ <script>
+// membuat class
+class data {
+            constructor(nama, umur, sangu) {
+                this.nama = nama;
+                this.umur = umur;
+                this.sangu = sangu;
+            }
+        }
+
+        // tab
+        function pidahkeform(){
+          document.getElementById("tabForm").classList.remove("d-none")
+          document.getElementById("tabTabel").classList.add("d-none")
+        }
+        function pindahketabel(){
+          document.getElementById("tabTabel").classList.remove("d-none")
+          document.getElementById("tabForm").classList.add("d-none")
+        }
+
+        // deklasri array
+        const listData = [];
+     
+
+        // membuat function kirim 
+        async function kirim() {
+          // const kirim = () => {
+            // ambil data pada form 
+            const nama = document.getElementById("nama").value;
+            const umur = parseInt(document.getElementById("umur").value);
+            const sangu = parseInt(document.getElementById("sangu").value);
+
+            // validasi
+           
+            if (nama.length < 10 || umur < 25 || sangu < 100000 || sangu > 1000000) {
+                document.getElementById("nama").classList.add("is-invalid")
+                document.getElementById("umur").classList.add("is-invalid")
+                document.getElementById("sangu").classList.add("is-invalid")
+                return;
+            }
+
+            // membuat objek baru
+            const dataBaru = new data(nama, umur, sangu);
+            // Push objek kedalam arry
+            listData.push(dataBaru);
+
+            // Simpan data 
+            const tabel = document.getElementById("tabelData");
+            const newRow = tabel.insertRow(1);
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            cell1.innerHTML = listData.length;
+            cell2.innerHTML = nama;
+            cell3.innerHTML = umur;
+            cell4.innerHTML = sangu;
+
+            // kosongkan form 
+            document.getElementById('nama').value = ""
+            document.getElementById('umur').value = ""
+            document.getElementById('sangu').value = ""
+            document.getElementById('nama').classList.remove("is-invalid")
+            document.getElementById('umur').classList.remove("is-invalid")
+            document.getElementById('sangu').classList.remove("is-invalid")
+
+
+            // Hitung rata-rata umur dan uang sangu dengan menggunakan Promise
+            await hitung(listData);
+            await alert();
+        }
+        
+        async function hitung(listData) {
+          const totalUmur = listData.reduce((sum, data) => sum + data.umur, 0);
+          const totalsangu = listData.reduce((sum, data) => sum + data.sangu, 0);
+          const rataRataUmur = totalUmur / listData.length;
+          const rataRataSangu = totalsangu / listData.length;
+
+          document.getElementById("rataUmur").textContent = rataRataUmur.toFixed(2);
+          document.getElementById("rataSangu").textContent = rataRataSangu.toFixed(2);
+        }
+
+        const alert = () => {
+          const myalert = document.getElementById("alert")
+          myalert.classList.remove("d-none");
+
+          setTimeout(() => {
+            myalert.classList.add("d-none");
+          }, 3000);
+        };
+
+ </script>
+  <!-- end table -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
